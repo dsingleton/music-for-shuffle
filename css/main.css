@@ -1,0 +1,76 @@
+/** Default state */
+body {
+    margin: 0;
+    padding: 1em;
+    
+    color: #1b1b1b;
+    background: #fff;
+    
+    font: medium/1.4 "Droid Serif", Serif;
+    
+    max-width: 500px;
+    margin: 0 auto;
+    
+    text-align: justify;
+}
+
+header {
+    margin: 3em 0 3em;
+}
+
+footer {
+    margin: 2em 0;
+}
+
+a {
+    color: #993F2D;
+}
+
+ol.tracks {
+    margin: 1em 0;
+    padding: 0;
+    position: relative;
+}
+
+ol.tracks li {
+    margin: 1em 0 3em;
+    padding: 0;
+    list-style: none;
+}
+
+ol.tracks img {
+    display: block;
+    
+    width: 600px;
+    height: 600px;
+    
+    border: none;
+}
+
+/** Playing state */
+
+body.playing header, 
+body.playing footer {
+    display: none;
+}
+
+body.playing {
+    max-width: auto;
+}
+
+body.playing ol.tracks img {
+/*    width: 900px;
+    height: 900px;*/
+}
+
+body.playing ol.tracks li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity 2s linear;
+}
+
+body.playing ol.tracks li.active {
+    opacity: 1;
+}
