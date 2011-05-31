@@ -5,7 +5,7 @@ MusicForShufflePlayer = function()
     // 2. create a np section, hide tracks list (rather than styling it)
     
     // next should get the top, then shuffle the playlist
-    
+    this.sounds = [];
     this.onload = function()
     {   
         // preload all sounds, auto-load off
